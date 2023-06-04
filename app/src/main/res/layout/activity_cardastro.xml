@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#142995"
+    android:padding="24dp"
+    tools:context=".ui.CadastroActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wallet Request"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_camera"
+            android:drawablePadding="10dp"
+            android:textColor="@color/black"
+            android:hint="0000 0000 0000 0000"
+            android:inputType="number"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumber" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="29dp"
+            android:text="número do cartão"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/edNumber"
+            app:layout_constraintEnd_toEndOf="@+id/edNumber"
+            app:layout_constraintStart_toStartOf="@+id/edNumber"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="nome titular "
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/edName"
+            app:layout_constraintEnd_toEndOf="@+id/edName"
+            app:layout_constraintStart_toStartOf="@+id/edName"
+            app:layout_constraintTop_toBottomOf="@+id/edNumber" />
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:hint="Nome Títular"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvVencimento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="vencimento"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/edName"
+            app:layout_constraintEnd_toEndOf="@+id/edVencimento"
+            app:layout_constraintStart_toStartOf="@+id/edVencimento"
+            app:layout_constraintTop_toBottomOf="@+id/edVencimento" />
+
+        <EditText
+            android:id="@+id/edVencimento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:hint="00/00"
+            android:maxLength="5"
+            android:inputType="number"
+            android:padding="12dp"
+            android:minWidth="120dp"
+            app:layout_constraintEnd_toStartOf="@id/edCode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvVencimento" />
+
+
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="código de segurança"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/edCode"
+            app:layout_constraintEnd_toEndOf="@+id/edCode"
+            app:layout_constraintStart_toStartOf="@+id/edCode"
+            app:layout_constraintTop_toBottomOf="@id/edName" />
+
+        <EditText
+            android:id="@+id/edCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:maxLength="3"
+            android:hint="***"
+            android:inputType="number"
+            android:padding="10dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edVencimento"
+            app:layout_constraintTop_toBottomOf="@+id/tvVencimento" />
+
+
+        <Button
+            android:id="@+id/btAvancar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#12C2E9"
+            android:enabled="false"
+            android:text="avançar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edVencimento" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
